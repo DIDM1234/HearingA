@@ -134,7 +134,7 @@
             android:layout_height="100dp"
             android:layout_margin="10dp"
             android:background="@color/colorPrimaryLight"
-            app:srcCompat="@drawable/avatar_girl2" />
+            app:srcCompat="@drawable/icon1" />
 
         <ImageButton
             android:id="@+id/imageButton"
@@ -142,7 +142,7 @@
             android:layout_height="100dp"
             android:layout_margin="10dp"
             android:background="@color/colorPrimaryLight"
-            app:srcCompat="@drawable/avatar_boy" />
+            app:srcCompat="@drawable/icon2" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

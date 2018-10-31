@@ -32,7 +32,6 @@
             android:name=".HearingTest"
             android:label="@string/title_activity_hearing_test"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".SaveProfile" />
         <activity
             android:name=".Home"
             android:label="@string/title_activity_home"
@@ -40,6 +39,10 @@
         <activity
             android:name=".Setting"
             android:label="@string/title_activity_setting"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SaveProfile"
+            android:label="@string/title_activity_save_profile"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

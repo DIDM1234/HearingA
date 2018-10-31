@@ -6,4 +6,5 @@
     <color name="colorPrimaryLight">#079688</color>
     <color name="colorBorder">#FFFFFF</color>
     <color name="colorText">#FFFFFF</color>
+    <color name="colorEditText">#FFFFFF</color>
 </resources>
