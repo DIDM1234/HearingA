@@ -23,9 +23,11 @@ public class splash_screen extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent i = new Intent(splash_screen.this, MainActivity.class);
+                Intent i = new Intent(splash_screen.this, Environment.class);
                 startActivity(i);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 finish();
+
             }
         }, SLEEP_TIMER);
     }

@@ -17,9 +17,9 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class AvatarListViewFragment extends Fragment {
     ArrayList<Avatars> avatarLists = new ArrayList();
     RecyclerView myRecyclerView;
-    String avatar[] = {"สมชาย","สมศรี","สมรศรี","ถนอม","แดง","ดำ"};
+    String avatar[] = {"สมชาย","สมศรี","สมรศรี"};
 
-    int images[] = {R.drawable.avatar_boy,R.drawable.avatar_girl,R.drawable.avatar_girl2,R.drawable.avatar_girl3,R.drawable.avatar_girl4,R.drawable.avatar_man};
+    int images[] = {R.drawable.avatar_boy,R.drawable.avatar_girl,R.drawable.avatar_girl2};
 
 
     @Override

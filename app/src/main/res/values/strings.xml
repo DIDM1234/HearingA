@@ -4,4 +4,8 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_environment">Environment</string>
+    <string name="title_activity_hearing_test">HearingTest</string>
+    <string name="title_activity_home">Home</string>
+    <string name="title_activity_setting">Setting</string>
 </resources>
