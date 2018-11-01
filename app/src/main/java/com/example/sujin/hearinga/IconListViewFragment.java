@@ -22,7 +22,7 @@ public class IconListViewFragment extends Fragment {
     ArrayList<Avatars> avatarLists = new ArrayList();
     RecyclerView myRecyclerView;
 
-    int images[]= {R.drawable.icon1,R.drawable.icon2,R.drawable.icon3,R.drawable.icon4,R.drawable.icon5,R.drawable.icon6,R.drawable.icon7,R.drawable.icon8,R.drawable.icon9,R.drawable.icon10,R.drawable.icon11};
+    int images[]= {R.drawable.airports,R.drawable.driving,R.drawable.living_room,R.drawable.office,R.drawable.restaurant,R.drawable.theater};
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

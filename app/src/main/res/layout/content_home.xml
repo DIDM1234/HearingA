@@ -133,16 +133,20 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
+            android:adjustViewBounds="true"
             android:background="@color/colorPrimaryLight"
-            app:srcCompat="@drawable/icon1" />
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/hf_active" />
 
         <ImageButton
             android:id="@+id/imageButton"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
+            android:adjustViewBounds="true"
             android:background="@color/colorPrimaryLight"
-            app:srcCompat="@drawable/icon2" />
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/bt_non_active" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

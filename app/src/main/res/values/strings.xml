@@ -9,17 +9,13 @@
     <string name="title_activity_home">Home</string>
     <string name="title_activity_setting">Setting</string>
     <string-array name="icon_list">
-        <item>icon1</item>
-        <item>icon2</item>
-        <item>icon3</item>
-        <item>icon4</item>
-        <item>icon5</item>
-        <item>icon6</item>
-        <item>icon7</item>
-        <item>icon8</item>
-        <item>icon9</item>
-        <item>icon10</item>
-        <item>icon11</item>
+        <item>airports</item>
+        <item>driving</item>
+        <item>living_room</item>
+        <item>office</item>
+        <item>restaurant</item>
+        <item>theater</item>
+
     </string-array>
     <string name="title_activity_save_profile">SaveProfile</string>
 </resources>
