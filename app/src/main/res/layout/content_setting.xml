@@ -8,4 +8,6 @@
     tools:context=".Setting"
     tools:showIn="@layout/activity_setting">
 
+
+
 </android.support.constraint.ConstraintLayout>
