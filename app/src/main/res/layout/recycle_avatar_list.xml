@@ -10,13 +10,13 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="170dp"
         android:background="@color/colorPrimaryLight"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="140dp"
             android:background="@color/colorPrimaryLight"
             android:orientation="vertical">
 
@@ -34,7 +34,6 @@
                     android:layout_height="match_parent"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true"
                     android:layout_marginTop="1dp"
                     android:layout_marginBottom="1dp"
                     android:src="@drawable/living_room"
@@ -47,8 +46,8 @@
             android:id="@+id/avatarTextView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="2dp"
             android:gravity="center"
+            android:textSize="@dimen/text_Header2_size"
             android:textColor="@color/colorText"
             android:text="TextView" />
     </LinearLayout>

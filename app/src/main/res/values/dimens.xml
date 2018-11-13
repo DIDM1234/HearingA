@@ -9,5 +9,9 @@
     <dimen name="icon_padding">4dp</dimen>
     <dimen name="avatar_height">250dip</dimen>
     <dimen name="text_size">18sp</dimen>
+    <dimen name="text_Header1_size">22sp</dimen>
+    <dimen name="text_Header2_size">22sp</dimen>
+    <dimen name="text_Header3_size">20sp</dimen>
+
 
 </resources>

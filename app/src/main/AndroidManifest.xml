@@ -43,8 +43,9 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".SaveProfile"
-            android:label="@string/title_activity_save_profile"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:label="@string/title_activity_save_profiles2"
+            android:theme="@style/AppTheme.NoActionBar" />
+
     </application>
 
 </manifest>

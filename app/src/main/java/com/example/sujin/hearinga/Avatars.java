@@ -21,16 +21,21 @@ public class Avatars {
     public void setIsFav(int isFav) {
         this.isFav = isFav;
     }
+
     public String getAvatarName() {
         return avatarName;
     }
+
     public void setAvatarName(String avatarName) {
         this.avatarName = avatarName;
     }
+
     public int getAvatarID() {
         return avatarID;
     }
+
     public void setavatarID(int imageAvatarID) {
         this.avatarID = imageAvatarID;
     }
+
 }

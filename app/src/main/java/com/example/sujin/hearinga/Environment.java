@@ -10,6 +10,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.View;
+import android.widget.Toast;
+
+import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -17,12 +20,13 @@ public class Environment extends AppCompatActivity implements MyListener {
 
 
     private CircleImageView mCircleImageView;
+    private DatabaseAccess databaseAccess;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_environment);
-
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -41,9 +45,28 @@ public class Environment extends AppCompatActivity implements MyListener {
                     .add(R.id.fragmentContainer, fragment)
                     .commit();
         }
-
-
     }
+
+    @Override
+    protected  void onResume(){
+        super.onResume();
+
+
+        FragmentManager fm = getSupportFragmentManager();
+
+        Fragment fragment = fm.findFragmentById(R.id.fragmentContainer);
+
+        //if (fragment == null) {
+            fragment = new AvatarListViewFragment();
+            ;
+            fm.beginTransaction()
+                    .add(R.id.fragmentContainer, fragment)
+                    .commit();
+       // }
+    }
+
+
+
 
 
     View.OnClickListener circleViewOnClick = new View.OnClickListener() {
@@ -65,6 +88,7 @@ public class Environment extends AppCompatActivity implements MyListener {
     public void listener(int id,String name) {
         openHomeActivity(id,name);
     }
+
     private void openHomeActivity(int id,String name)
     {
         Intent myIntent = new Intent(this,Home.class);

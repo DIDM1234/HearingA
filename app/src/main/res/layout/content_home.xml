@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryLight"
+    android:background="@drawable/background5"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".Home"
     tools:showIn="@layout/activity_home">
@@ -12,11 +12,11 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="220dp"
-        android:layout_height="220dp"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:background="@color/colorPrimaryLight"
@@ -25,9 +25,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="180dp"
+            android:layout_height="210dp"
             android:background="@color/colorPrimaryLight"
             android:orientation="vertical">
 
@@ -41,7 +42,8 @@
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/avatar"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="178dp"
+                    android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentBottom="true"
                     android:layout_marginTop="2dp"
@@ -60,7 +62,7 @@
             android:gravity="center"
             android:text="กดเพื่อเพิ่ม"
             android:textColor="@color/colorText"
-            android:textSize="20dp" />
+            android:textSize="@dimen/text_Header1_size" />
     </LinearLayout>
 
 
@@ -69,10 +71,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="24dp"
         android:gravity="center"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         tools:layout_editor_absoluteX="0dp">
 
@@ -110,43 +111,6 @@
             app:start_offset="1" />
 
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="122dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_margin="10dp"
-            android:adjustViewBounds="true"
-            android:background="@color/colorPrimaryLight"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/hf_active" />
-
-        <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_margin="10dp"
-            android:adjustViewBounds="true"
-            android:background="@color/colorPrimaryLight"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/bt_non_active" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

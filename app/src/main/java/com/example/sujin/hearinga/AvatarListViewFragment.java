@@ -9,29 +9,51 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class AvatarListViewFragment extends Fragment {
     ArrayList<Avatars> avatarLists = new ArrayList();
     RecyclerView myRecyclerView;
-    String avatar[] = {"ห้องนั่งเล่น","ขับรถ","สนามบิน"};
 
-    int images[] = {R.drawable.living_room,R.drawable.driving,R.drawable.airports};
-
+    private DatabaseAccess databaseAccess;
+    String[] avatar;
+    int[] images;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+        databaseAccess = DatabaseAccess.getInstance(getActivity().getApplicationContext());
+        databaseAccess.open();
+        List<Account> list = databaseAccess.getAccount();
+        avatar = new String[list.size()];
+        images = new int[list.size()];
+        for(int i=0;i<list.size();i++)
+        {
+            Account account = list.get(i);
+            int id = this.getResources().getIdentifier(account.iconName,"drawable",getActivity().getPackageName());
+            images[i] = id;
+            avatar[i] = account.name;
+        }
+        databaseAccess.close();
+
         avatarLists.clear();
-        for(int i =0;i<avatar.length;i++){
+        for(int i =0;i<list.size();i++){
             Avatars item = new Avatars();
             item.setAvatarName(avatar[i]);
             item.setavatarID(images[i]);
             avatarLists.add(item);
         }
+    }
+
+    @Override
+    public void  onResume() {
+        super.onResume();
     }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -40,6 +62,7 @@ public class AvatarListViewFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_avatar_list, container, false);
         myRecyclerView = (RecyclerView) view.findViewById(R.id.avatarView);
         myRecyclerView.setHasFixedSize(true);
+
         LinearLayoutManager MyLayoutManager = new LinearLayoutManager(getActivity());
         MyLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
         if (avatarLists.size() > 0 & myRecyclerView != null) {
@@ -49,13 +72,6 @@ public class AvatarListViewFragment extends Fragment {
 
         return view;
     }
-
-    @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-
-    }
-
 
     public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
         private ArrayList<Avatars> list;
@@ -87,14 +103,11 @@ public class AvatarListViewFragment extends Fragment {
         }
     }
 
-
-
     private void  sendData(int id,String name)
     {
         MyListener myListener = (MyListener) getActivity();
         myListener.listener(id,name);
     }
-
 
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
@@ -117,6 +130,5 @@ public class AvatarListViewFragment extends Fragment {
 
         }
     }
-
 
 }
